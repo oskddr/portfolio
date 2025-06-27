@@ -1,0 +1,1623 @@
+@font-face{font-family: Mooxy; src: url(../Resources/fonts/mooxy.ttf);}
+@font-face{font-family: Agile; src: url(../Resources/fonts/agile.ttf);}
+
+body{background-color: #101010; color: white; font-family: Mooxy; overflow-y: scroll;}
+*{box-sizing: border-box;}
+img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
+
+/* XXL Screen (dflt) [compter] {supported} */
+@media only screen and (min-width: 2561px){
+    h1{
+        position: absolute;
+        top: -3%; left: 41%; transform: translate(-41%, 3%);
+        font-size: 65px;
+    }
+    h2{
+        position: absolute;
+        top: 4%; left: 42.5%; transform: translate(-42.5%, -4%);
+        font-family: sans-serif;
+        color: #ffffff95;
+    }
+
+    #returnComs{
+        z-index: 999;
+        position: fixed;
+        top: 0; left: 0;
+        width: 175px;
+        height: 50px;
+        background-color: #111111;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 25px 30px;
+        transition: .5s;
+    } #returnComs div{
+        font-size: 35px;
+        width: 60%;
+        display: flex;
+        transform: translateY(7px);
+    } #returnComs img{
+        transform: translateX(3.5px);
+    } #returnComs:hover{
+        width: 190px;
+        height: 53px;
+        filter: drop-shadow(2px 2px 10px #fff);
+        cursor: pointer;
+    }
+    
+    .scrollingFrame{
+        position: absolute;
+        top: 10%; left: 70%; transform: translateX(-70%);
+        height: 10000px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .UI{
+        width: 100%;
+        height: 500px;
+    } .UI #Title1{
+        position: absolute;
+        top: -.4%; left: 25%; transform: translateX(-25%); 
+        color: white;
+        font-family: Mooxy;
+        font-size: 65px;
+    } 
+    .UI .Robloxcontainer{
+        position: absolute;
+        top: 1%; left: 0;
+        width: 100%;
+        height: 5200px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Robloxcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+    } .UI .Robloxcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Robloxcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 65%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialVid{
+        height: 450px;
+    } .UI .Robloxcontainer >* img{
+        position: absolute;
+        top: 35%; left: 4.5%; transform: translate(-4.5%, -35%);
+        width: 65%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialImage{
+        height: 60%;
+    } .UI .Robloxcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Robloxcontainer >* p span{
+        color: #31929a;
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .UI .Robloxcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Robloxcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Robloxcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Robloxcontainer >* div .Special{
+        width: 125px;
+    } .UI .Robloxcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Robloxcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    .UI #Title2{
+        position: absolute;
+        top: 53%; left: 20%; transform: translateX(-20%);
+        font-family: Mooxy;
+        font-size: 65px;
+    } .UI .Webcontainer{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4550px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Webcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        display: flex;
+    } .UI .Webcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Webcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Webcontainer >* p span{
+        font-family: sans-serif;
+        font-weight: 500;
+    } .UI .Webcontainer >* p .SpecialSpan{
+        color: #de3738;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+    } .UI .Webcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Webcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Webcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Webcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 65%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Webcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Webcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    
+    .bottom{
+        position: absolute;
+        bottom: -542%; left: 0; transform: translateY(542%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* XL Screen  [compter] {supported} */
+@media only screen and (min-width: 1441px) and (max-width: 2560px){
+    h1{
+        position: absolute;
+        top: -3%; left: 43%; transform: translate(-43%, 3%);
+        font-size: 65px;
+    }
+    h2{
+        position: absolute;
+        top: 4%; left: 46%; transform: translate(-46%, -4%);
+        font-family: sans-serif;
+        color: #ffffff95;
+    }
+
+    #returnComs{
+        position: fixed;
+        top: 0; left: 0;
+        width: 175px;
+        height: 50px;
+        background-color: #111111;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 25px 30px;
+        transition: .5s;
+    } #returnComs div{
+        font-size: 35px;
+        width: 60%;
+        display: flex;
+        transform: translateY(7px);
+    } #returnComs img{
+        transform: translateX(3.5px);
+    } #returnComs:hover{
+        width: 190px;
+        height: 53px;
+        filter: drop-shadow(2px 2px 10px #fff);
+        cursor: pointer;
+    }
+    
+    .scrollingFrame{
+        position: absolute;
+        top: 10%; left: 70%; transform: translateX(-70%);
+        height: 10000px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .UI{
+        width: 100%;
+        height: 500px;
+    } .UI #Title1{
+        position: absolute;
+        top: -.4%; left: 25%; transform: translateX(-25%); 
+        color: white;
+        font-family: Mooxy;
+        font-size: 65px;
+    } 
+    .UI .Robloxcontainer{
+        position: absolute;
+        top: 1%; left: 0;
+        width: 100%;
+        height: 5200px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Robloxcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+    } .UI .Robloxcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Robloxcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 85%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialVid{
+        height: 450px;
+    } .UI .Robloxcontainer >* img{
+        position: absolute;
+        top: 35%; left: 4.5%; transform: translate(-4.5%, -35%);
+        width: 85%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialImage{
+        height: 60%;
+    } .UI .Robloxcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Robloxcontainer >* p span{
+        color: #31929a;
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .UI .Robloxcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Robloxcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Robloxcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Robloxcontainer >* div .Special{
+        width: 125px;
+    } .UI .Robloxcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Robloxcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    .UI #Title2{
+        position: absolute;
+        top: 53%; left: 20%; transform: translateX(-20%);
+        font-family: Mooxy;
+        font-size: 65px;
+    } .UI .Webcontainer{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4550px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Webcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        display: flex;
+    } .UI .Webcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Webcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Webcontainer >* p span{
+        font-family: sans-serif;
+        font-weight: 500;
+    } .UI .Webcontainer >* p .SpecialSpan{
+        color: #de3738;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+    } .UI .Webcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Webcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Webcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Webcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 85%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Webcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Webcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    
+    .bottom{
+        position: absolute;
+        bottom: -550%; left: 0; transform: translateY(550%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* L Laptop (2nd dflt) [compter] {supported} */
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    h1{
+        position: absolute;
+        top: -3%; left: 56%; transform: translate(-56%, 3%);
+        font-size: 65px;
+    }
+    h2{
+        position: absolute;
+        top: 4%; left: 56%; transform: translate(-56%, -4%);
+        font-family: sans-serif;
+        color: #ffffff95;
+        white-space: nowrap;
+    }
+
+    #returnComs{
+        position: fixed;
+        top: 0; left: 0;
+        width: 175px;
+        height: 50px;
+        background-color: #111111;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin: 25px 30px;
+        transition: .5s;
+    } #returnComs div{
+        font-size: 35px;
+        width: 60%;
+        display: flex;
+        transform: translateY(7px);
+    } #returnComs img{
+        transform: translateX(3.5px);
+    } #returnComs:hover{
+        width: 190px;
+        height: 53px;
+        filter: drop-shadow(2px 2px 10px #fff);
+        cursor: pointer;
+    }
+    
+    .scrollingFrame{
+        position: absolute;
+        top: 10%; left: 70%; transform: translateX(-70%);
+        height: 10000px;
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .UI{
+        width: 100%;
+        height: 500px;
+    } .UI #Title1{
+        position: absolute;
+        top: -.4%; left: 50%; transform: translateX(-50%); 
+        color: white;
+        font-family: Mooxy;
+        font-size: 65px;
+        white-space: nowrap;
+    } 
+    .UI .Robloxcontainer{
+        position: absolute;
+        top: 1%; left: 0;
+        width: 100%;
+        height: 5200px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Robloxcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+    } .UI .Robloxcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Robloxcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialVid{
+        height: 400px;
+    } .UI .Robloxcontainer >* img{
+        position: absolute;
+        top: 35%; left: 4.5%; transform: translate(-4.5%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialImage{
+        height: 60%;
+    } .UI .Robloxcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Robloxcontainer >* p span{
+        color: #31929a;
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .UI .Robloxcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Robloxcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Robloxcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Robloxcontainer >* div .Special{
+        width: 125px;
+    } .UI .Robloxcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Robloxcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    .UI #Title2{
+        position: absolute;
+        top: 53%; left: 20%; transform: translateX(-20%);
+        font-family: Mooxy;
+        font-size: 65px;
+    } .UI .Webcontainer{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4550px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Webcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        display: flex;
+    } .UI .Webcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Webcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Webcontainer >* p span{
+        font-family: sans-serif;
+        font-weight: 500;
+    } .UI .Webcontainer >* p .SpecialSpan{
+        color: #de3738;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+    } .UI .Webcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Webcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Webcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Webcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Webcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Webcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    
+    .bottom{
+        position: absolute;
+        bottom: -845%; left: 0; transform: translateY(845%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Laptop [compter] {supported} */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    h1{
+        position: absolute;
+        top: -2%; left: 56%; transform: translate(-56%, 2%);
+        font-size: 65px;
+        white-space: nowrap;
+    }
+    h2{
+        position: absolute;
+        top: 5%; left: 56%; transform: translate(-56%, -5%);
+        font-family: sans-serif;
+        color: #ffffff95;
+        white-space: nowrap;
+    }
+
+    #returnComs{
+        position: fixed;
+        top: 0; left: 0;
+        width: 50px;
+        height: 50px;
+        background-color: #111111;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        margin: 25px 30px;
+        transition: .5s;
+    } #returnComs div{
+        opacity: 0!important;
+    } #returnComs img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 50px;
+    } #returnComs:hover{
+        width: 190px;
+        height: 53px;
+        filter: drop-shadow(2px 2px 10px #fff);
+        cursor: pointer;
+    }
+    
+    .scrollingFrame{
+        position: absolute;
+        top: 10%; left: 70%; transform: translateX(-70%);
+        height: 10000px;
+        width: 78%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .UI{
+        width: 100%;
+        height: 500px;
+    } .UI #Title1{
+        position: absolute;
+        top: -.4%; left: 50%; transform: translateX(-50%); 
+        color: white;
+        font-family: Mooxy;
+        font-size: 65px;
+        white-space: nowrap;
+    } 
+    .UI .Robloxcontainer{
+        position: absolute;
+        top: 1%; left: 0;
+        width: 100%;
+        height: 5200px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Robloxcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+    } .UI .Robloxcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Robloxcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialVid{
+        height: 400px;
+    } .UI .Robloxcontainer >* img{
+        position: absolute;
+        top: 35%; left: 4.5%; transform: translate(-4.5%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialImage{
+        height: 310px
+    } .UI .Robloxcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Robloxcontainer >* p span{
+        color: #31929a;
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .UI .Robloxcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Robloxcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Robloxcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Robloxcontainer >* div .Special{
+        width: 125px;
+    } .UI .Robloxcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Robloxcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    .UI #Title2{
+        position: absolute;
+        top: 53%; left: 50%; transform: translateX(-50%);
+        font-family: Mooxy;
+        font-size: 65px;
+        white-space: nowrap;
+    } .UI .Webcontainer{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4550px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Webcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        display: flex;
+    } .UI .Webcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Webcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Webcontainer >* p span{
+        font-family: sans-serif;
+        font-weight: 500;
+    } .UI .Webcontainer >* p .SpecialSpan{
+        color: #de3738;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+    } .UI .Webcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Webcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Webcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Webcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Webcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Webcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    
+    .bottom{
+        position: absolute;
+        bottom: -575%; left: 0; transform: translateY(575%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Tablet [tablet] {supported} */
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    h1{
+        position: absolute;
+        top: 8%; left: 56%; transform: translate(-56%, -8%);
+        font-size: 65px;
+        white-space: nowrap;
+    }
+    h2{
+        position: absolute;
+        top: 15%; left: 56%; transform: translate(-56%, -15%);
+        font-family: sans-serif;
+        color: #ffffff95;
+        white-space: nowrap;
+    }
+
+    #returnComs{
+        position: fixed;
+        top: 0; left: 0;
+        width: 50px;
+        height: 50px;
+        background-color: #111111;
+        border: 1.5px solid white;
+        border-radius: 50px;
+        margin: 25px 30px;
+        transition: .5s;
+    } #returnComs div{
+        opacity: 0!important;
+    } #returnComs img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 50px;
+    } #returnComs:hover{
+        width: 190px;
+        height: 53px;
+        filter: drop-shadow(2px 2px 10px #fff);
+        cursor: pointer;
+    }
+    
+    .scrollingFrame{
+        position: absolute;
+        top: 20%; left: -49.25%; transform: translateX(50%);
+        height: 10000px;
+        width: 105%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .UI{
+        width: 100%;
+        height: 500px;
+    } .UI #Title1{
+        position: absolute;
+        top: -.4%; left: 50%; transform: translateX(-50%); 
+        color: white;
+        font-family: Mooxy;
+        font-size: 65px;
+        white-space: nowrap;
+    } 
+    .UI .Robloxcontainer{
+        position: absolute;
+        top: 1%; left: 0;
+        width: 100%;
+        height: 5200px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Robloxcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+    } .UI .Robloxcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Robloxcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialVid{
+        height: 400px;
+    } .UI .Robloxcontainer >* img{
+        position: absolute;
+        top: 35%; left: 4.5%; transform: translate(-4.5%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Robloxcontainer >* .SpecialImage{
+        height: 310px
+    } .UI .Robloxcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Robloxcontainer >* p span{
+        color: #31929a;
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .UI .Robloxcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Robloxcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Robloxcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Robloxcontainer >* div .Special{
+        width: 125px;
+    } .UI .Robloxcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Robloxcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    .UI #Title2{
+        position: absolute;
+        top: 53%; left: 50%; transform: translateX(-50%);
+        font-family: Mooxy;
+        font-size: 65px;
+        white-space: nowrap;
+    } .UI .Webcontainer{
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        height: 4550px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    } .UI .Webcontainer >*{
+        position: relative;
+        width: 100%;
+        height: 700px;
+        display: flex;
+    } .UI .Webcontainer >* h3{
+        position: absolute;
+        top: -5%; right: 0; transform: translateY(5%);
+        width: 99%;
+        font-size: 45px;
+        font-family: Agile;
+    } .UI .Webcontainer >* p{
+        position: absolute;
+        bottom: 7.5%; right: 0; transform: translateY(-7.5%);
+        width: 99%;
+        font-size: 25px;
+    } .UI .Webcontainer >* p span{
+        font-family: sans-serif;
+        font-weight: 500;
+    } .UI .Webcontainer >* p .SpecialSpan{
+        color: #de3738;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-decoration: underline;
+    } .UI .Webcontainer >* div{
+        position: absolute;
+        bottom: 2%; right: 0; transform: translateY(-2%);
+        width: 99%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    } .UI .Webcontainer >* div >*{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 87%;
+        width: 46.5px;
+        transition: .5s;
+    } .UI .Webcontainer >* div >* img{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        border: none;
+        filter: brightness(1);
+    } .UI .Webcontainer >* video{
+        position: absolute;
+        top: 35%; left: 3%; transform: translate(-3%, -35%);
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        filter: brightness(.25);
+        transition: .7s;
+    } .UI .Webcontainer >* div div:hover{
+        transform: translateY(-4px);
+        cursor: pointer;
+        box-shadow: 0 0 10px #fff;
+    } .UI .Webcontainer >*>*:hover{
+        filter: brightness(1);
+        cursor: pointer;
+    }
+    
+    
+    .bottom{
+        position: absolute;
+        bottom: -583%; left: 6%; transform: translateY(583%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Mobile L [mobile] {not supported} */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    body{overflow: hidden;}
+    .scrollingFrame, h1, h2, img {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+        opacity: 1!important;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+        opacity: 1!important;
+    }
+}
+
+/* Mobile M [mobile] {not supported} */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    body{overflow: hidden;}
+    .scrollingFrame, h1, h2, img {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+        opacity: 1!important;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+        opacity: 1!important;
+    }
+}
+
+/* Mobile S [mobile] {not supported} */
+@media only screen and (max-width: 320px) {
+    body{overflow: hidden;}
+    .scrollingFrame, h1, h2, img {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+        opacity: 1!important;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+        opacity: 1!important;
+    }
+}

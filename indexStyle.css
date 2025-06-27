@@ -1,0 +1,2747 @@
+@font-face{font-family: Mooxy; src: url(../Resources/fonts/mooxy.ttf);}
+@font-face{font-family: Agile; src: url(../Resources/fonts/agile.ttf);}
+
+body{background-color: #101010; overflow-y: scroll;}
+*{box-sizing: border-box;}
+img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
+.scrollingFrame::-webkit-scrollbar {display: none;}
+
+/* XXL Screen (dflt) [compter] {supported} */
+@media only screen and (min-width: 2561px){
+    .scrollingFrame{
+        position: relative;
+        top: -1%; left: 50%; transform: translate(-50%, 1%);
+        height: 2800px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .mainInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        background-color: #111111;
+
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        overflow: visible;
+    } .mainInfo h1{
+        position: absolute;
+        top: -15%; left: 5%; transform: translate(-5%, 15%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .mainInfo img{
+        position: absolute;
+        top: 55%; left: 3%; transform: translate(-3%, -55%);
+        width: 200px;
+        height: auto;
+        opacity: .6;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(103%) contrast(102%);
+    } .mainInfo p{
+        position: absolute;
+        top: 75%; left: 18%; transform: translate(-18%, -75%);
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        white-space: nowrap;
+    } .mainInfo #FIx{
+        position: absolute;
+        left: 91%; top: 20%; transform: translate(-91%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } .mainInfo #FIx img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } .mainInfo #FIx:hover{
+        transform: translate(-90%, calc(-20% - 3.5px)); 
+        cursor: pointer;
+    } .mainInfo #FIroblox{
+        position: absolute;
+        left: 97%; top: 20%; transform: translate(-97%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } .mainInfo #FIroblox img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } .mainInfo #FIroblox:hover{
+        transform: translate(-97%, calc(-20% - 3.5px));
+        cursor: pointer;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .languagesInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 5px;
+    } .languagesInfo h1{
+        position: absolute;
+        top: -5%; left: 2%; transform: translate(-2%, 5%);
+        font-size: 45px;
+        font-family: Mooxy;
+    } .platforms{
+        position: absolute;
+        top: 55%; left: 2%; transform: translateY(-55%);
+        width: 100%;
+        display: flex;
+        height: var(--height)
+    } .platforms .Pholder{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--height));
+        position: relative;
+    } .platforms .Pholder .PHitem{
+        width: var(--width);
+        height: var(--height);
+        left: 100%;
+    } .platforms .Pholder .PHitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider{
+        position: absolute;
+        top: 90%; transform: translateY(-90%);
+        width: 100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
+    } .topSlider .TSslider{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    } .topSlider .TSslider .TSSitem{
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: sliderTop 20s linear infinite;
+        animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+    } .topSlider .TSslider .TSSitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider:hover .TSSitem{
+        animation-play-state: paused!important;
+    }@keyframes sliderTop{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
+    }
+
+    .portfolio{
+        position: relative;
+        width: 100%;
+        height: 1050px;
+        border-radius: 5px;
+    } .portfolio .workH1{
+        position: absolute;
+        top: -3%; left: 3%; transform: translate(-5%, 3%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWdiv{
+        position: absolute;
+        top: 15%; left: 2%; transform: translateY(-15%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWdiv img{
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%; transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%,  #fff 90%, #000 100%);
+        transition: .5s ease;
+    } .portfolio .PWdiv h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWdiv .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWdiv .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWdiv .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWdiv .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWdiv:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWdiv:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWdiv:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .portfolio .personalH1{
+        position: absolute;
+        bottom: 34%; left: 4%; transform: translate(-4%, -34%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWpersonal{
+        z-index: 1000;
+        position: absolute;
+        bottom: 1%; left: 2%; transform: translateY(-1%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal .coverpreview{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b3;
+       transition: .5s;
+    } .portfolio .PWpersonal .coverpreview h2{
+        position: absolute;
+        top: 15%; left: 50%; transform: translate(-50%, -15%);
+        font-family: Agile;
+        font-size: 120px;
+        opacity: 1;
+        transition: .5s;
+    } .portfolio .PWpersonal img {
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%;
+        transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%, #fff 90%, #000 100%);
+        transition: transform .5s ease;
+    } .portfolio .PWpersonal h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWpersonal .PWDneeded{
+        z-index: 2;
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWpersonal .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWpersonal .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWpersonal .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWpersonal:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWpersonal:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWpersonal:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    } .portfolio .PWpersonal:hover .coverpreview {
+        background-color: #0000008a;
+    } .portfolio .PWpersonal:hover .coverpreview h2{
+        opacity: 0;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .timeline{
+        position: relative;
+        width: 100%;
+        height: 770px;
+        border-radius: 5px;
+    } .timeline h1{
+        position: absolute;
+        top: -2%; left: 3%; transform: translate(-3%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .timeline .line{
+        position: absolute;
+        left: -19.5%; top: 50.5%; transform: translate(19.5%, -50.5%);
+        transform: rotate(90deg);
+        width: 470px;
+        height: 2px;
+        display: flex;
+        flex-direction: row;
+        gap: 136px;
+        background: linear-gradient(to right, #ffffff00 0%, #ffffff 25%, #ffffff 75%, #ffffff00 100%);
+    } .timeline .line > *{
+        position: relative;
+        transform: translateY(-7px);
+        width: 20px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #111;
+        border-radius: 50px;
+    } .timeline .line > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        background-color: #31929a;
+        border-radius: 50px;
+    }
+    .timeline .checkpoints{
+        position: absolute;
+        top: 75%; right: 0; transform: translateY(-75%);
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .timeline .checkpoints > *{
+        position: relative;
+        width: 90%;
+        height: 165px;
+    } .timeline .checkpoints > * h2{
+        position: absolute;
+        top: -15%; right: 0%; transform: translateY(15%);
+        font-family: Agile;
+        font-size: 45px;
+        width: 98.7%;
+    } .timeline .checkpoints > * h2 span{
+        color: #31929a;
+        text-decoration: underline;
+    } .timeline .checkpoints > * h3{
+        position: absolute;
+        top: 33%; left: 1.5%; transform: translate(-1.5%, -33%);
+        color: #ffffff94;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .timeline .checkpoints > * h3 span{
+        color: #31929a;
+        font-family: Agile;
+    } .timeline .checkpoints > * p{
+        position: absolute;
+        bottom: -7%; right: 0; transform: translateY(7%);
+        width: 98.7%;
+        height: 35%;
+        font-family: sans-serif;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .terms{
+        position: relative;
+        width: 100%;
+        height: 398px;
+    } .terms h1{
+        position: absolute;
+        top: -2%; left: 5%; transform: translate(-5%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .terms h1::after{
+        content: '';
+        position: absolute;
+        bottom: 15%; left: 0; transform: translateY(-15%);
+        width: 100%;
+        height: 6%;
+        background-color: #de3738;
+        border-radius: 50px;
+    } .terms .flex{
+        position: absolute;
+        left: 50%; top: 80%; transform: translate(-50%, -80%);
+        width: 95%;
+        height: 60%;
+    } .terms .flex ul{
+        position: relative;
+        list-style: none;
+    } .terms .flex ul li{
+        position: relative;
+        font-size: 21.8px;
+        font-family: sans-serif;
+    } .terms .flex ul li::before{
+        content: "";
+        position: absolute;
+        left: -4%; top: 50%; transform: translate(4%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #de3738;
+        border-radius: 50px;
+        box-shadow: inset 0 0 0 4px #fff;
+        transition: .5s;
+    } .terms .flex ul li:not(:last-child) {
+        margin-bottom: 10px;
+    } .terms .flex ul:hover li::before{
+        filter: drop-shadow(2px 2px 5px #de3738);
+        box-shadow: inset 0 0 0 3px #fff;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .bottom{
+        z-index: 250;
+        position: absolute;
+        bottom: -140%; left: 0;
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* XL Screen [compter] {supported} */
+@media only screen and (min-width: 1441px) and (max-width: 2560px){
+    .scrollingFrame{
+        position: relative;
+        top: -1%; left: 50%; transform: translate(-50%, 1%);
+        height: 2800px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        overflow-y: scroll;
+        gap: 50px;
+    }
+
+    .mainInfo{
+        position: relative;
+        width: 100%;
+        height: 170px;
+        background-color: #111111;
+
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+    } .mainInfo h1{
+        position: absolute;
+        top: -9%; left: 5%; transform: translate(-5%, -9%);
+        font-size: 56px;
+        font-family: Mooxy;
+    } .mainInfo img{
+        position: absolute;
+        top: 55%; left: 3%; transform: translate(-3%, -55%);
+        width: 200px;
+        height: auto;
+        opacity: .6;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(103%) contrast(102%);
+    } .mainInfo p{
+        position: absolute;
+        top: 75%; left: 20%; transform: translate(-20%, -75%);
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        white-space: nowrap;
+    } #FIx{
+        position: absolute;
+        left: 91%; top: 20%; transform: translate(-91%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIx img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIx:hover{
+        transform: translate(-90%, calc(-20% - 3.5px)); 
+        cursor: pointer;
+    } #FIroblox{
+        position: absolute;
+        left: 97%; top: 20%; transform: translate(-97%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIroblox img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIroblox:hover{
+        transform: translate(-97%, calc(-20% - 3.5px));
+        cursor: pointer;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .languagesInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 5px;
+    } .languagesInfo h1{
+        position: absolute;
+        top: -5%; left: 2%; transform: translate(-2%, 5%);
+        font-size: 45px;
+        font-family: Mooxy;
+    } .platforms{
+        position: absolute;
+        top: 55%; left: 2%; transform: translateY(-55%);
+        width: 100%;
+        display: flex;
+        height: var(--height)
+    } .platforms .Pholder{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--height));
+        position: relative;
+    } .platforms .Pholder .PHitem{
+        width: var(--width);
+        height: var(--height);
+        left: 100%;
+    } .platforms .Pholder .PHitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider{
+        position: absolute;
+        top: 90%; transform: translateY(-90%);
+        width: 100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
+    } .topSlider .TSslider{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    } .topSlider .TSslider .TSSitem{
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: sliderTop 20s linear infinite;
+        animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+    } .topSlider .TSslider .TSSitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider:hover .TSSitem{
+        animation-play-state: paused!important;
+    }@keyframes sliderTop{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .portfolio{
+        position: relative;
+        width: 100%;
+        height: 1050px;
+        border-radius: 5px;
+    } .portfolio .workH1{
+        position: absolute;
+        top: -3%; left: 3%; transform: translate(-5%, 3%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWdiv{
+        position: absolute;
+        top: 15%; left: 2%; transform: translateY(-15%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWdiv img{
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%; transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%,  #fff 90%, #000 100%);
+        transition: .5s ease;
+    } .portfolio .PWdiv h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWdiv .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWdiv .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWdiv .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWdiv .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWdiv:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWdiv:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWdiv:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .portfolio .personalH1{
+        position: absolute;
+        bottom: 34%; left: 4%; transform: translate(-4%, -34%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWpersonal{
+        z-index: 1000;
+        position: absolute;
+        bottom: 1%; left: 2%; transform: translateY(-1%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal .coverpreview{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b3;
+       transition: .5s;
+    } .portfolio .PWpersonal .coverpreview h2{
+        position: absolute;
+        top: 15%; left: 50%; transform: translate(-50%, -15%);
+        font-family: Agile;
+        font-size: 120px;
+        opacity: 1;
+        transition: .5s;
+    } .portfolio .PWpersonal img {
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%;
+        transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%, #fff 90%, #000 100%);
+        transition: transform .5s ease;
+    } .portfolio .PWpersonal h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWpersonal .PWDneeded{
+        z-index: 2;
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWpersonal .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWpersonal .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWpersonal .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWpersonal:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWpersonal:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWpersonal:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    } .portfolio .PWpersonal:hover .coverpreview {
+        background-color: #0000008a;
+    } .portfolio .PWpersonal:hover .coverpreview h2{
+        opacity: 0;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .timeline{
+        position: relative;
+        width: 100%;
+        height: 770px;
+        border-radius: 5px;
+    } .timeline h1{
+        position: absolute;
+        top: -2%; left: 3%; transform: translate(-3%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .timeline .line{
+        position: absolute;
+        left: -19.5%; top: 50.5%; transform: translate(19.5%, -50.5%);
+        transform: rotate(90deg);
+        width: 470px;
+        height: 2px;
+        display: flex;
+        flex-direction: row;
+        gap: 136px;
+        background: linear-gradient(to right, #ffffff00 0%, #ffffff 25%, #ffffff 75%, #ffffff00 100%);
+    } .timeline .line > *{
+        position: relative;
+        transform: translateY(-7px);
+        width: 20px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #111;
+        border-radius: 50px;
+    } .timeline .line > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        background-color: #31929a;
+        border-radius: 50px;
+    }
+    .timeline .checkpoints{
+        position: absolute;
+        top: 75%; right: 0; transform: translateY(-75%);
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .timeline .checkpoints > *{
+        position: relative;
+        width: 90%;
+        height: 165px;
+    } .timeline .checkpoints > * h2{
+        position: absolute;
+        top: -15%; right: 0%; transform: translateY(15%);
+        font-family: Agile;
+        font-size: 45px;
+        width: 98.7%;
+    } .timeline .checkpoints > * h2 span{
+        color: #31929a;
+        text-decoration: underline;
+    } .timeline .checkpoints > * h3{
+        position: absolute;
+        top: 33%; left: 1.5%; transform: translate(-1.5%, -33%);
+        color: #ffffff94;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .timeline .checkpoints > * h3 span{
+        color: #31929a;
+        font-family: Agile;
+    } .timeline .checkpoints > * p{
+        position: absolute;
+        bottom: -7%; right: 0; transform: translateY(7%);
+        width: 98.7%;
+        height: 35%;
+        font-family: sans-serif;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .terms{
+        position: relative;
+        width: 100%;
+        height: 398px;
+    } .terms h1{
+        position: absolute;
+        top: -2%; left: 5%; transform: translate(-5%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .terms h1::after{
+        content: '';
+        position: absolute;
+        bottom: 15%; left: 0; transform: translateY(-15%);
+        width: 100%;
+        height: 6%;
+        background-color: #de3738;
+        border-radius: 50px;
+    } .terms .flex{
+        position: absolute;
+        left: 50%; top: 80%; transform: translate(-50%, -80%);
+        width: 95%;
+        height: 60%;
+    } .terms .flex ul{
+        position: relative;
+        list-style: none;
+    } .terms .flex ul li{
+        position: relative;
+        font-size: 21.8px;
+        font-family: sans-serif;
+    } .terms .flex ul li::before{
+        content: "";
+        position: absolute;
+        left: -4%; top: 50%; transform: translate(4%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #de3738;
+        border-radius: 50px;
+        box-shadow: inset 0 0 0 4px #fff;
+        transition: .5s;
+    } .terms .flex ul li:not(:last-child) {
+        margin-bottom: 10px;
+    } .terms .flex ul:hover li::before{
+        filter: drop-shadow(2px 2px 5px #de3738);
+        box-shadow: inset 0 0 0 3px #fff;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .bottom{
+        position: absolute;
+        bottom: -187%; left: 0; transform: translateY(-187%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* L Laptop (2nd dflt) [compter] {supported} */
+@media only screen and (min-width: 1025px) and (max-width: 1440px){
+    .scrollingFrame{
+        position: relative;
+        top: -1%; left: 50%; transform: translate(-50%, 1%);
+        height: 2800px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        overflow-y: scroll;
+        gap: 50px;
+    }
+
+    .mainInfo{
+        position: relative;
+        width: 100%;
+        height: 170px;
+        background-color: #111111;
+
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+    } .mainInfo h1{
+        position: absolute;
+        top: -9%; left: 5%; transform: translate(-5%, -9%);
+        font-size: 56px;
+        font-family: Mooxy;
+    } .mainInfo img{
+        position: absolute;
+        top: 55%; left: 3%; transform: translate(-3%, -55%);
+        width: 200px;
+        height: auto;
+        opacity: .6;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(103%) contrast(102%);
+    } .mainInfo p{
+        position: absolute;
+        top: 75%; left: 17%; transform: translate(-17%, -75%);
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        white-space: nowrap;
+    } #FIx{
+        position: absolute;
+        left: 91%; top: 20%; transform: translate(-91%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIx img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIx:hover{
+        transform: translate(-90%, calc(-20% - 3.5px)); 
+        cursor: pointer;
+    } #FIroblox{
+        position: absolute;
+        left: 97%; top: 20%; transform: translate(-97%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIroblox img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIroblox:hover{
+        transform: translate(-97%, calc(-20% - 3.5px));
+        cursor: pointer;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .languagesInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 5px;
+    } .languagesInfo h1{
+        position: absolute;
+        top: -5%; left: 2%; transform: translate(-2%, 5%);
+        font-size: 45px;
+        font-family: Mooxy;
+    } .platforms{
+        position: absolute;
+        top: 55%; left: 2%; transform: translateY(-55%);
+        width: 100%;
+        display: flex;
+        height: var(--height)
+    } .platforms .Pholder{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--height));
+        position: relative;
+    } .platforms .Pholder .PHitem{
+        width: var(--width);
+        height: var(--height);
+        left: 100%;
+    } .platforms .Pholder .PHitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider{
+        position: absolute;
+        top: 90%; transform: translateY(-90%);
+        width: 100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
+    } .topSlider .TSslider{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    } .topSlider .TSslider .TSSitem{
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: sliderTop 20s linear infinite;
+        animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+    } .topSlider .TSslider .TSSitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider:hover .TSSitem{
+        animation-play-state: paused!important;
+    }@keyframes sliderTop{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .portfolio{
+        position: relative;
+        width: 100%;
+        height: 1050px;
+        border-radius: 5px;
+    } .portfolio .workH1{
+        position: absolute;
+        top: -3%; left: 3%; transform: translate(-5%, 3%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWdiv{
+        position: absolute;
+        top: 15%; left: 2%; transform: translateY(-15%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWdiv img{
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%; transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%,  #fff 90%, #000 100%);
+        transition: .5s ease;
+    } .portfolio .PWdiv h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWdiv .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWdiv .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWdiv .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWdiv .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWdiv:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWdiv:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWdiv:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .portfolio .personalH1{
+        position: absolute;
+        bottom: 34%; left: 4%; transform: translate(-4%, -34%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWpersonal{
+        z-index: 1000;
+        position: absolute;
+        bottom: 1%; left: 2%; transform: translateY(-1%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal .coverpreview{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b3;
+       transition: .5s;
+    } .portfolio .PWpersonal .coverpreview h2{
+        position: absolute;
+        top: 15%; left: 50%; transform: translate(-50%, -15%);
+        font-family: Agile;
+        font-size: 120px;
+        opacity: 1;
+        transition: .5s;
+    } .portfolio .PWpersonal img {
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%;
+        transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%, #fff 90%, #000 100%);
+        transition: transform .5s ease;
+    } .portfolio .PWpersonal h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWpersonal .PWDneeded{
+        z-index: 2;
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWpersonal .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWpersonal .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWpersonal .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWpersonal:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWpersonal:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWpersonal:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    } .portfolio .PWpersonal:hover .coverpreview {
+        background-color: #0000008a;
+    } .portfolio .PWpersonal:hover .coverpreview h2{
+        opacity: 0;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .timeline{
+        position: relative;
+        width: 100%;
+        height: 770px;
+        border-radius: 5px;
+    } .timeline h1{
+        position: absolute;
+        top: -2%; left: 3%; transform: translate(-3%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .timeline .line{
+        position: absolute;
+        left: -19.5%; top: 50.5%; transform: translate(19.5%, -50.5%);
+        transform: rotate(90deg);
+        width: 470px;
+        height: 2px;
+        display: flex;
+        flex-direction: row;
+        gap: 136px;
+        background: linear-gradient(to right, #ffffff00 0%, #ffffff 25%, #ffffff 75%, #ffffff00 100%);
+    } .timeline .line > *{
+        position: relative;
+        transform: translateY(-7px);
+        width: 20px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #111;
+        border-radius: 50px;
+    } .timeline .line > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        background-color: #31929a;
+        border-radius: 50px;
+    }
+    .timeline .checkpoints{
+        position: absolute;
+        top: 75%; right: 0; transform: translateY(-75%);
+        width: 95%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .timeline .checkpoints > *{
+        position: relative;
+        width: 90%;
+        height: 165px;
+    } .timeline .checkpoints > * h2{
+        position: absolute;
+        top: -15%; right: 0%; transform: translateY(15%);
+        font-family: Agile;
+        font-size: 45px;
+        width: 98.7%;
+    } .timeline .checkpoints > * h2 span{
+        color: #31929a;
+        text-decoration: underline;
+    } .timeline .checkpoints > * h3{
+        position: absolute;
+        top: 33%; left: 1.5%; transform: translate(-1.5%, -33%);
+        color: #ffffff94;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .timeline .checkpoints > * h3 span{
+        color: #31929a;
+        font-family: Agile;
+    } .timeline .checkpoints > * p{
+        position: absolute;
+        bottom: -7%; right: 0; transform: translateY(7%);
+        width: 98.7%;
+        height: 35%;
+        font-family: sans-serif;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .terms{
+        position: relative;
+        width: 100%;
+        height: 398px;
+    } .terms h1{
+        position: absolute;
+        top: -2%; left: 5%; transform: translate(-5%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .terms h1::after{
+        content: '';
+        position: absolute;
+        bottom: 15%; left: 0; transform: translateY(-15%);
+        width: 100%;
+        height: 6%;
+        background-color: #de3738;
+        border-radius: 50px;
+    } .terms .flex{
+        position: absolute;
+        left: 50%; top: 80%; transform: translate(-50%, -80%);
+        width: 95%;
+        height: 60%;
+    } .terms .flex ul{
+        position: relative;
+        list-style: none;
+    } .terms .flex ul li{
+        position: relative;
+        font-size: 21.8px;
+        font-family: sans-serif;
+    } .terms .flex ul li::before{
+        content: "";
+        position: absolute;
+        left: -4%; top: 50%; transform: translate(4%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #de3738;
+        border-radius: 50px;
+        box-shadow: inset 0 0 0 4px #fff;
+        transition: .5s;
+    } .terms .flex ul li:not(:last-child) {
+        margin-bottom: 10px;
+    } .terms .flex ul:hover li::before{
+        filter: drop-shadow(2px 2px 5px #de3738);
+        box-shadow: inset 0 0 0 3px #fff;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .bottom{
+        position: absolute;
+        bottom: -211%; left: 0; transform: translateY(211%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Laptop [compter] {supported} */
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .scrollingFrame{
+        position: relative;
+        top: -1%; left: 50%; transform: translate(-50%, 1%);
+        height: 2800px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+    
+    .mainInfo{
+        position: relative;
+        width: 100%;
+        height: 170px;
+        background-color: #111111;
+
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+    } .mainInfo h1{
+        position: absolute;
+        top: -9%; left: 5%; transform: translate(-5%, -9%);
+        font-size: 56px;
+        font-family: Mooxy;
+    } .mainInfo img{
+        position: absolute;
+        top: 55%; left: 3%; transform: translate(-3%, -55%);
+        width: 200px;
+        height: auto;
+        opacity: .6;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(103%) contrast(102%);
+    } .mainInfo p{
+        position: absolute;
+        top: 75%; left: 25%; transform: translate(-25%, -75%);
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        white-space: nowrap;
+    } #FIx{
+        position: absolute;
+        left: 89%; top: 20%; transform: translate(-89%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIx img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIx:hover{
+        transform: translate(-90%, calc(-20% - 3.5px)); 
+        cursor: pointer;
+    } #FIroblox{
+        position: absolute;
+        left: 97%; top: 20%; transform: translate(-97%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIroblox img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIroblox:hover{
+        transform: translate(-97%, calc(-20% - 3.5px));
+        cursor: pointer;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .languagesInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 5px;
+    } .languagesInfo h1{
+        position: absolute;
+        top: -5%; left: 2%; transform: translate(-2%, 5%);
+        font-size: 45px;
+        font-family: Mooxy;
+    } .platforms{
+        position: absolute;
+        top: 55%; left: 2%; transform: translateY(-55%);
+        width: 100%;
+        display: flex;
+        height: var(--height)
+    } .platforms .Pholder{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--height));
+        position: relative;
+    } .platforms .Pholder .PHitem{
+        width: var(--width);
+        height: var(--height);
+        left: 100%;
+    } .platforms .Pholder .PHitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider{
+        position: absolute;
+        top: 90%; transform: translateY(-90%);
+        width: 100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
+    } .topSlider .TSslider{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    } .topSlider .TSslider .TSSitem{
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: sliderTop 20s linear infinite;
+        animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+    } .topSlider .TSslider .TSSitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider:hover .TSSitem{
+        animation-play-state: paused!important;
+    }@keyframes sliderTop{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .portfolio{
+        position: relative;
+        width: 100%;
+        height: 1050px;
+        border-radius: 5px;
+    } .portfolio .workH1{
+        position: absolute;
+        top: -3%; left: 3%; transform: translate(-5%, 3%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWdiv{
+        position: absolute;
+        top: 15%; left: 2%; transform: translateY(-15%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWdiv img{
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%; transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%,  #fff 90%, #000 100%);
+        transition: .5s ease;
+    } .portfolio .PWdiv h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWdiv .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWdiv .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWdiv .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWdiv .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWdiv:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWdiv:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWdiv:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .portfolio .personalH1{
+        position: absolute;
+        bottom: 34%; left: 4%; transform: translate(-4%, -34%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWpersonal{
+        z-index: 1000;
+        position: absolute;
+        bottom: 1%; left: 2%; transform: translateY(-1%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal .coverpreview{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b3;
+       transition: .5s;
+    } .portfolio .PWpersonal .coverpreview h2{
+        position: absolute;
+        top: 15%; left: 50%; transform: translate(-50%, -15%);
+        font-family: Agile;
+        font-size: 120px;
+        opacity: 1;
+        transition: .5s;
+    } .portfolio .PWpersonal img {
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%;
+        transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%, #fff 90%, #000 100%);
+        transition: transform .5s ease;
+    } .portfolio .PWpersonal h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWpersonal .PWDneeded{
+        z-index: 2;
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWpersonal .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWpersonal .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWpersonal .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWpersonal:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWpersonal:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWpersonal:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    } .portfolio .PWpersonal:hover .coverpreview {
+        background-color: #0000008a;
+    } .portfolio .PWpersonal:hover .coverpreview h2{
+        opacity: 0;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .timeline{
+        position: relative;
+        width: 100%;
+        height: 770px;
+        border-radius: 5px;
+    } .timeline h1{
+        position: absolute;
+        top: -2%; left: 3%; transform: translate(-3%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .timeline .line{
+        position: absolute;
+        left: -23.5%; top: 50.5%; transform: translate(23.5%, -50.5%);
+        transform: rotate(90deg);
+        width: 470px;
+        height: 2px;
+        display: flex;
+        flex-direction: row;
+        gap: 136px;
+        background: linear-gradient(to right, #ffffff00 0%, #ffffff 25%, #ffffff 75%, #ffffff00 100%);
+    } .timeline .line > *{
+        position: relative;
+        transform: translateY(-7px);
+        width: 20px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #111;
+        border-radius: 50px;
+    } .timeline .line > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        background-color: #31929a;
+        border-radius: 50px;
+    }
+    .timeline .checkpoints{
+        position: absolute;
+        top: 75%; right: 3%; transform: translateY(-75%);
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .timeline .checkpoints > *{
+        position: relative;
+        width: 90%;
+        height: 165px;
+    } .timeline .checkpoints > * h2{
+        position: absolute;
+        top: -15%; right: 0%; transform: translateY(15%);
+        font-family: Agile;
+        font-size: 45px;
+        width: 98.7%;
+    } .timeline .checkpoints > * h2 span{
+        color: #31929a;
+        text-decoration: underline;
+    } .timeline .checkpoints > * h3{
+        position: absolute;
+        top: 33%; left: 1.5%; transform: translate(-1.5%, -33%);
+        color: #ffffff94;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .timeline .checkpoints > * h3 span{
+        color: #31929a;
+        font-family: Agile;
+    } .timeline .checkpoints > * p{
+        position: absolute;
+        bottom: -7%; left: 1%; transform: translateY(7%);
+        width: 110%;
+        height: 35%;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .terms{
+        position: relative;
+        width: 100%;
+        height: 398px;
+    } .terms h1{
+        position: absolute;
+        top: -2%; left: 5%; transform: translate(-5%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .terms h1::after{
+        content: '';
+        position: absolute;
+        bottom: 15%; left: 0; transform: translateY(-15%);
+        width: 100%;
+        height: 6%;
+        background-color: #de3738;
+        border-radius: 50px;
+    } .terms .flex{
+        position: absolute;
+        left: 50%; top: 80%; transform: translate(-50%, -80%);
+        width: 95%;
+        height: 60%;
+    } .terms .flex ul{
+        position: relative;
+        list-style: none;
+    } .terms .flex ul li{
+        position: relative;
+        font-size: 21.8px;
+        font-family: sans-serif;
+    } .terms .flex ul li::before{
+        content: "";
+        position: absolute;
+        left: -4%; top: 50%; transform: translate(4%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #de3738;
+        border-radius: 50px;
+        box-shadow: inset 0 0 0 4px #fff;
+        transition: .5s;
+    } .terms .flex ul li:not(:last-child) {
+        margin-bottom: 10px;
+    } .terms .flex ul:hover li::before{
+        filter: drop-shadow(2px 2px 5px #de3738);
+        box-shadow: inset 0 0 0 3px #fff;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .bottom{
+        position: absolute;
+        bottom: -210%; left: 0; transform: translateY(-210%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Tablet [tablet] {supported} */
+@media only screen and (min-width: 426px) and (max-width: 768px){
+    .scrollingFrame{
+        position: relative;
+        top: -1%; left: 50%; transform: translate(-50%, 1%);
+        height: 2800px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: white;
+        overflow-y: scroll;
+    }
+
+    .mainInfo{
+        position: relative;
+        width: 100%;
+        height: 170px;
+        background-color: #111111;
+
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+    } .mainInfo h1{
+        position: absolute;
+        top: -9%; left: 5%; transform: translate(-5%, -9%);
+        font-size: 56px;
+        font-family: Mooxy;
+    } .mainInfo img{
+        position: absolute;
+        top: 55%; left: 3%; transform: translate(-3%, -55%);
+        width: 200px;
+        height: auto;
+        opacity: .6;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(79deg) brightness(103%) contrast(102%);
+    } .mainInfo p{
+        position: absolute;
+        top: 75%; left: 50%; transform: translate(-50%, -75%);
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        white-space: nowrap;
+    } #FIx{
+        position: absolute;
+        left: 89%; top: 20%; transform: translate(-89%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIx img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIx:hover{
+        transform: translate(-90%, calc(-20% - 3.5px)); 
+        cursor: pointer;
+    } #FIroblox{
+        position: absolute;
+        left: 97%; top: 20%; transform: translate(-97%, -20%);
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid #383838;
+        border-top: 2px solid #383838;
+        border-right: 2px solid #383838;
+        background-color: #101010;
+        transition: 1s ease;
+    } #FIroblox img{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    } #FIroblox:hover{
+        transform: translate(-97%, calc(-20% - 3.5px));
+        cursor: pointer;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .languagesInfo{
+        position: relative;
+        width: 100%;
+        height: 190px;
+        border-radius: 5px;
+    } .languagesInfo h1{
+        position: absolute;
+        top: -5%; left: 2%; transform: translate(-2%, 5%);
+        font-size: 45px;
+        font-family: Mooxy;
+    } .platforms{
+        position: absolute;
+        top: 55%; left: 2%; transform: translateY(-55%);
+        width: 100%;
+        display: flex;
+        height: var(--height)
+    } .platforms .Pholder{
+        position: relative;
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--height));
+        width: 95%;
+    } .platforms .Pholder .PHitem{
+        width: var(--width);
+        height: var(--height);
+        left: 100%;
+    } .platforms .Pholder .PHitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider{
+        position: absolute;
+        top: 90%; transform: translateY(-90%);
+        width: 100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
+    } .topSlider .TSslider{
+        display: flex;
+        width: max-content;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    } .topSlider .TSslider .TSSitem{
+        width: var(--width);
+        height: var(--height);
+        position: absolute;
+        left: 100%;
+        animation: sliderTop 20s linear infinite;
+        animation-delay: calc( (20s / var(--quantity)) * (var(--position) - 1) );
+    } .topSlider .TSslider .TSSitem img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    } .topSlider:hover .TSSitem{
+        animation-play-state: paused!important;
+    }@keyframes sliderTop{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .portfolio{
+        position: relative;
+        width: 100%;
+        height: 1050px;
+        border-radius: 5px;
+    } .portfolio .workH1{
+        position: absolute;
+        top: -3%; left: 3%; transform: translate(-5%, 3%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWdiv{
+        position: absolute;
+        top: 15%; left: 2%; transform: translateY(-15%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal .coverpreview{
+        z-index: 5;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b3;
+       transition: .5s;
+    } .portfolio .PWpersonal .coverpreview h2{
+        position: absolute;
+        top: 15%; left: 50%; transform: translate(-50%, -15%);
+        font-family: Agile;
+        font-size: 120px;
+        opacity: 1;
+        transition: .5s;
+    } .portfolio .PWdiv img{
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%; transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%,  #fff 90%, #000 100%);
+        transition: .5s ease;
+    } .portfolio .PWdiv h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWdiv .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWdiv .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWdiv .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWdiv .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWdiv:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWdiv:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWdiv:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+
+    .portfolio .personalH1{
+        position: absolute;
+        bottom: 34%; left: 4%; transform: translate(-4%, -34%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .portfolio .PWpersonal{
+        position: absolute;
+        bottom: 1%; left: 2%; transform: translateY(-1%);
+        width: 98%;
+        height: 400px;
+        background: transparent;
+        border: 1px solid #282828;
+        border-radius: 5px; 
+        overflow: hidden;
+        transition: .5s ease;
+    } .portfolio .PWpersonal img {
+        position: absolute;
+        z-index: -1;
+        top: 40%; left: 50%;
+        transform: translate(-50%, -40%);
+        width: 120%;
+        height: 170%;
+        mask-image: linear-gradient(to top, transparent 25%, #fff 90%, #000 100%);
+        transition: transform .5s ease;
+    } .portfolio .PWpersonal h2{
+        position: absolute;
+        top: 67%; left: 2%; transform: translate(-2%, -67%);
+        font-family: Mooxy;
+    } .portfolio .PWpersonal .PWDneeded{
+        position: absolute;
+        top: 87%; left: 3%; transform: translate(-3%, -87%);
+        width: 400px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    } .portfolio .PWpersonal .PWDneeded > *{
+        position: relative;
+        background-color: #111111;
+        border: 1px solid #383838;
+        border-radius: 5px;
+        height: 90%;
+        width: 45px;
+        opacity: 1;
+    } .portfolio .PWpersonal .PWDneeded > * > *{
+        position: absolute;
+        z-index: 1;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 80%;
+        height: 75%;
+        opacity: .65;
+        mask-image: none;
+    } .portfolio .PWpersonal .descP{
+        position: absolute;
+        top: 91%; left: 2.5%; transform: translate(-2.5%, -91%);
+        color: #ffffff94;
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .portfolio .PWpersonal:hover{
+        box-shadow: 0 0 15px #000;
+        cursor: pointer;
+    } .portfolio .PWpersonal:hover img{
+        transform: translate(-50%, -40%) scale(1.15);
+    } .portfolio .PWpersonal:hover .PWDneeded > * > * {
+        transform: translate(-50%, -50%) scale(1) !important;
+    } .portfolio .PWpersonal:hover .coverpreview {
+        background-color: #0000008a;
+    } .portfolio .PWpersonal:hover .coverpreview h2{
+        opacity: 0;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .timeline{
+        position: relative;
+        width: 100%;
+        height: 770px;
+        border-radius: 5px;
+    } .timeline h1{
+        position: absolute;
+        top: -2%; left: 3%; transform: translate(-3%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .timeline .line{
+        position: absolute;
+        left: -30.5%; top: 50.5%; transform: translate(30.5%, -50.5%);
+        transform: rotate(90deg);
+        width: 470px;
+        height: 2px;
+        display: flex;
+        flex-direction: row;
+        gap: 136px;
+        background: linear-gradient(to right, #ffffff00 0%, #ffffff 25%, #ffffff 75%, #ffffff00 100%);
+    } .timeline .line > *{
+        position: relative;
+        transform: translateY(-7px);
+        width: 20px;
+        height: 16px;
+        background-color: #fff;
+        border: 2px solid #111;
+        border-radius: 50px;
+    } .timeline .line > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 75%;
+        height: 75%;
+        background-color: #31929a;
+        border-radius: 50px;
+    }
+    .timeline .checkpoints{
+        position: absolute;
+        top: 75%; right: 3%; transform: translateY(-75%);
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .timeline .checkpoints > *{
+        position: relative;
+        width: 90%;
+        height: 165px;
+    } .timeline .checkpoints > * h2{
+        position: absolute;
+        top: -15%; right: 0%; transform: translateY(15%);
+        font-family: Agile;
+        font-size: 45px;
+        width: 98.7%;
+        white-space: nowrap;
+    } .timeline .checkpoints > * h2 span{
+        color: #31929a;
+        text-decoration: underline;
+    } .timeline .checkpoints > * h3{
+        position: absolute;
+        top: 33%; left: 1.5%; transform: translate(-1.5%, -33%);
+        color: #ffffff94;
+        font-family: sans-serif;
+        font-weight: bold;
+    } .timeline .checkpoints > * h3 span{
+        color: #31929a;
+        font-family: Agile;
+    } .timeline .checkpoints > * p{
+        position: absolute;
+        bottom: -7%; left: 1%; transform: translateY(7%);
+        width: 110%;
+        height: 35%;
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .terms{
+        position: relative;
+        width: 100%;
+        height: 398px;
+    } .terms h1{
+        position: absolute;
+        top: -2%; left: 5%; transform: translate(-5%, 2%);
+        font-size: 60px;
+        font-family: Mooxy;
+    } .terms h1::after{
+        content: '';
+        position: absolute;
+        bottom: 15%; left: 0; transform: translateY(-15%);
+        width: 100%;
+        height: 6%;
+        background-color: #de3738;
+        border-radius: 50px;
+    } .terms .flex{
+        position: absolute;
+        left: 50%; top: 80%; transform: translate(-50%, -80%);
+        width: 95%;
+        height: 60%;
+    } .terms .flex ul{
+        position: relative;
+        list-style: none;
+    } .terms .flex ul li{
+        position: relative;
+        font-size: 21.8px;
+        font-family: sans-serif;
+    } .terms .flex ul li::before{
+        content: "";
+        position: absolute;
+        left: -7%; top: 50%; transform: translate(7%, -50%);
+        width: 18px;
+        height: 18px;
+        background-color: #de3738;
+        border-radius: 50px;
+        box-shadow: inset 0 0 0 4px #fff;
+        transition: .5s;
+    } .terms .flex ul li:not(:last-child) {
+        margin-bottom: 10px;
+    } .terms .flex ul:hover li::before{
+        filter: drop-shadow(2px 2px 5px #de3738);
+        box-shadow: inset 0 0 0 3px #fff;
+    }
+
+    /* ********** */
+    /* ********** */
+    /* ********** */
+
+    .bottom{
+        position: absolute;
+        bottom: -210%; left: 0; transform: translateY(-210%);
+        width: 100%;
+        height: 330px;
+        color: white;
+        overflow: hidden;
+    } .bottom hr{
+        width: 90%;
+        height: 1px;
+        background-color: #313131;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 1px #000;
+    } .bottom h1{
+        position: absolute;
+        top: 8%; left: 50%; transform: translate(-50%, 8%);
+        font-family: sans-serif;
+        font-size: 16px;
+    } .bottom .numberstats{
+        position: absolute;
+        top: 47%; left: 0; transform: translateY(-47%);
+        height: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    } .bottom .numberstats >*{
+        position: relative;
+        height: 100%;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: Agile;
+    } .bottom .numberstats >* h3{
+        transform: translateY(-30px);
+        font-size: 55px;
+    } .bottom .numberstats >* h4{
+        position: absolute;
+        bottom: 1%; left: 50%; transform: translate(-50%, -1%);
+        font-size: 20px;
+        white-space: nowrap;
+        color: #ffffff8b;
+        font-family: sans-serif;
+    } .bottom .Bcontacts{
+        position: absolute;
+        bottom: -4%; left: 0; transform: translateY(4%);
+        width: 100%;
+        height: 45%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    } .bottom .Bcontacts > *{
+        position: relative;
+        background-color: #252525;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        object-fit: contain;
+        border: 1px solid #fff;
+        transition: .5s ease;
+    } .bottom .Bcontacts > * > *{
+        position: absolute;
+        top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 85%;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(100deg) brightness(103%) contrast(104%);
+    } .bottom .Bcontacts > *:hover{
+        transform: translateY(calc(-7% - 2.5px));
+        box-shadow: 0 0 12px #fff;
+        cursor: pointer;
+    }
+}
+
+/* Mobile L [mobile] {not supported} */
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    body{overflow: hidden;}
+    .scrollingFrame {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+    }
+}
+
+/* Mobile M [mobile] {not supported} */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    body{overflow: hidden;}
+    .scrollingFrame {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+    }
+}
+
+/* Mobile S [mobile] {not supported} */
+@media only screen and (max-width: 320px) {
+    body{overflow: hidden;}
+    .scrollingFrame {opacity: 0; pointer-events: none;}
+    .mobile{
+        position: absolute;
+        top: 0; left: 0;
+        width: 261.5%;
+        height: 261.5%;
+        opacity: 1!important;
+        color: white;
+    } .mobile h1{
+        position: absolute;
+        top: 20%; right: 0%; transform: translate(-0%, -20%);
+        font-family: Mooxy;
+        font-size: 130px;
+        width: 95%;
+    } .mobile img{
+        position: absolute;
+        top: 50%; left: 75%; transform: translate(-70%, -50%);
+        width: 95%;
+        height: 33%;
+        filter: invert(100%) sepia(1%) saturate(175%) hue-rotate(8deg) brightness(113%) contrast(100%);
+    }
+}
