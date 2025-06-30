@@ -1,5 +1,5 @@
-@font-face{font-family: Mooxy; src: url(../Resources/fonts/mooxy.ttf);}
-@font-face{font-family: Agile; src: url(../Resources/fonts/agile.ttf);}
+@font-face{font-family: Mooxy; src: url(Resources/fonts/mooxy.ttf);}
+@font-face{font-family: Agile; src: url(Resources/fonts/agile.ttf);}
 
 body{background-color: #101010; color: white; font-family: Mooxy; overflow-y: scroll;}
 *{box-sizing: border-box;}
