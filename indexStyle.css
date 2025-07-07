@@ -2124,7 +2124,6 @@ img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
         width: 50px;
         border-radius: 5px;
         object-fit: contain;
-        border: 1px solid #fff;
         transition: .5s ease;
     } .bottom .Bcontacts > * > *{
         position: absolute;
