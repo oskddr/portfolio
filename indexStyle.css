@@ -2066,7 +2066,7 @@ img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
         height: 330px;
         color: white;
         overflow: hidden;
-        border: 1px solid red;
+        border: 1px solid #fff;
     } .bottom hr{
         width: 90%;
         height: 1px;
@@ -2116,6 +2116,7 @@ img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
         gap: 50px;
         justify-content: center;
         align-items: center;
+        border: 1px solid red;
     } .bottom .Bcontacts > *{
         position: relative;
         background-color: #252525;
