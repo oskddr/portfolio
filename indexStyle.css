@@ -2066,6 +2066,7 @@ img {-webkit-user-drag: none;  user-select: none; pointer-events: auto;}
         height: 330px;
         color: white;
         overflow: hidden;
+        border: 1px solid red;
     } .bottom hr{
         width: 90%;
         height: 1px;
